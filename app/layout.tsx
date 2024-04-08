@@ -11,13 +11,17 @@ export default function RootLayout({ children, }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <body className="bg-primary-50 dark:bg-neutral-900">{children}</body>
-    </ThemeProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-primary-50 dark:bg-neutral-900">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
