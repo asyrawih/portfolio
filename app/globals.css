@@ -49,3 +49,12 @@
     --ring: 0 0% 83.1%;
   }
 }
+
+pre {
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+ 
+pre [data-line] {
+  padding: 0 1rem;
+}
