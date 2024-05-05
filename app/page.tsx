@@ -1,13 +1,13 @@
-import {Experience } from "@/components/features/experience";
+import { Experience } from "@/components/features/experience";
 import { Hero } from "@/components/features/hero";
-import Languages from "@/components/features/languages";
+import Working from "@/components/features/working";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Experience />
-      <Languages />
+      <Working />
     </>
   );
 }
