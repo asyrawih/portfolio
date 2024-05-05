@@ -51,7 +51,10 @@ export function Experience() {
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-sky-600"
-            colors={[[125, 211, 252]]}
+            colors={[
+              [125, 211, 252],
+              [232, 122, 121],
+            ]}
           />
         </Card>
       </div>

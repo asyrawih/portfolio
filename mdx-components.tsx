@@ -4,10 +4,12 @@ import type { MDXComponents } from 'mdx/types'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
+    h1: ({ children, id }) => (
+      <h1 id={id} className='text-3xl'>{children}</h1>
+    ),
+    h2: ({ children, id }) => (
+      <h1 id={id} className='text-2xl'>{children}</h1>
+    ),
     ...components,
-    h1: ({ id, children }) => <a href={`#${id}`}><h1 className="text-5xl font-bold">{children}</h1></a>,
-    h2: ({ children }) => <h2 className="text-4xl font-bold">{children}</h2>,
-    ul: ({ children }) => <ul className="list-disc list-inside">{children}</ul>,
-    body: ({ children }) => <div className='container'>{children}</div>,
   }
 }
