@@ -30,18 +30,5 @@ export default {
   },
   toc: {
     float: true
-  },
-  sidebar: {
-    titleComponent({ title, type }) {
-      if (type === 'separator') {
-        return (
-          <div style={{ background: 'cyan', textAlign: 'center' }}>{title}</div>
-        )
-      }
-      if (title === 'Blogs') {
-        return <>{title}</>
-      }
-      return <>{title}</>
-    }
   }
 }

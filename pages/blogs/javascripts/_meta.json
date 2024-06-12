@@ -1,3 +1,9 @@
 {
-  "index": "Introductions"
+  "index": "Introductions",
+  "design_pattern": "Design Patterns",
+  "factory_pattern": "Factory Pattern",
+  "module_pattern": "Module Pattern",
+  "prototype_pattern": "Prototype Pattern",
+  "proxy_pattern": "Proxy Pattern",
+  "singleton_pattern": "Singleton Pattern"
 }

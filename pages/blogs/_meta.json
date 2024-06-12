@@ -2,5 +2,6 @@
   "index": "Introductions",
   "golang":"Golang",
   "databases":"Database",
-  "javascripts": "Javascripts"
+  "javascripts": "Javascripts",
+  "kubernates": "Kubernates (k8s)"
 }

@@ -1,3 +1,6 @@
 {
-  "index": "Introductions"
+  "index": "Introductions",
+  "hello_world": "Getting Started",
+  "variables": "Variables",
+  "cases": "Studi Kasus"
 }
