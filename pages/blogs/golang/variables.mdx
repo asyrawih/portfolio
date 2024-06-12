@@ -1,0 +1,125 @@
+import { Callout } from 'nextra/components'
+
+# Variables
+
+## Penjelasan Singakat Apa itu Variables
+
+***Pengertian Variable*** <br />
+variable adalah sebuah tipe data yang berfungsi untuk menyimpan data.
+
+
+### Tipe Data di Golang
+<Callout>
+  ***perlu di perhatikan***
+  variable tidak hanya dapat menyimpan data, tetapi juga dapat menyimpan referensi ke data.
+  ataupun `function`.
+</Callout>
+
+
+| **Tipe Data**      | **Deskripsi**                                                  | **Contoh**                               |
+|--------------------|----------------------------------------------------------------|------------------------------------------|
+| **Numerik**        |                                                                |                                          |
+| `int`              | Bilangan bulat berbasis arsitektur (32 atau 64 bit)            | `var x int = 10`                         |
+| `int8`             | Bilangan bulat 8-bit, rentang: -128 hingga 127                 | `var y int8 = -12`                       |
+| `int16`            | Bilangan bulat 16-bit, rentang: -32768 hingga 32767            | `var z int16 = 32767`                    |
+| `int32`            | Bilangan bulat 32-bit, rentang: -2147483648 hingga 2147483647  | `var a int32 = 100000`                   |
+| `int64`            | Bilangan bulat 64-bit, rentang: -9223372036854775808 hingga 9223372036854775807 | `var b int64 = 123456789`   |
+| `uint`             | Bilangan bulat positif berbasis arsitektur (32 atau 64 bit)    | `var u uint = 10`                        |
+| `uint8`            | Bilangan bulat positif 8-bit, rentang: 0 hingga 255            | `var v uint8 = 200`                      |
+| `uint16`           | Bilangan bulat positif 16-bit, rentang: 0 hingga 65535         | `var w uint16 = 65535`                   |
+| `uint32`           | Bilangan bulat positif 32-bit, rentang: 0 hingga 4294967295    | `var t uint32 = 300000`                  |
+| `uint64`           | Bilangan bulat positif 64-bit, rentang: 0 hingga 18446744073709551615 | `var s uint64 = 9876543210`   |
+| `float32`          | Bilangan desimal 32-bit                                        | `var f float32 = 1.23`                   |
+| `float64`          | Bilangan desimal 64-bit                                        | `var g float64 = 123.456`                |
+| **Kompleks**       |                                                                |                                          |
+| `complex64`        | Bilangan kompleks dengan bagian real dan imajiner float32      | `var c complex64 = 1+2i`                 |
+| `complex128`       | Bilangan kompleks dengan bagian real dan imajiner float64      | `var d complex128 = 1+2i`                |
+| **Boolean**        |                                                                |                                          |
+| `bool`             | Nilai boolean `true` atau `false`                              | `var flag bool = true`                   |
+| **Karakter dan Teks** |                                                            |                                          |
+| `byte`             | Alias untuk `uint8`, sering digunakan untuk data mentah        | `var b byte = 'A'`                       |
+| `rune`             | Alias untuk `int32`, sering digunakan untuk karakter Unicode   | `var r rune = 'あ'`                      |
+| `string`           | Sekuens dari karakter Unicode                                  | `var s string = "Hello"`                 |
+| **Array**          |                                                                |                                          |
+| `[n]T`             | Sekuens tetap dari elemen dengan tipe `T`                      | `var arr [3]int = [3]int{1, 2, 3}`       |
+| **Slice**          |                                                                |                                          |
+| `[]T`              | Serangkaian elemen dengan tipe `T` yang panjangnya dapat berubah| `var slc []int = []int{1, 2, 3}`         |
+| **Map**            |                                                                |                                          |
+| `map[K]V`          | Koleksi pasangan kunci-nilai dengan tipe `K` dan `V`           | `var mp map[string]int = map[string]int{"a": 1}` |
+| **Struct**         |                                                                |                                          |
+| `struct`           | Kumpulan data dengan tipe yang berbeda yang dikelompokkan      | `type Person struct { Name string; Age int }` |
+| **Pointer**        |                                                                |                                          |
+| `*T`               | Menunjuk ke tipe `T`                                           | `var p *int`                             |
+| **Function**       |                                                                |                                          |
+| `func`             | Jenis fungsi atau prosedur                                     | `func add(a int, b int) int { return a + b }` |
+
+
+
+
+### Deklarasi Variable 
+```go {4,4} copy
+package main
+
+func main(){
+  var name string = "Hanan"
+}
+
+```
+
+### Deklarasi Variable Constant 
+```go {4,4} copy
+package main
+
+func main(){
+ const name string = "Hanan"
+}
+
+```
+
+
+### Deklarasi Enum (Iota) Pada golang
+```go copy
+package main
+
+import "fmt"
+
+type Day int
+
+const (
+    Monday Day = iota // iota dimulai dari 0
+    Tuesday
+    Wednesday
+    Thursday
+    Friday
+    Saturday
+    Sunday
+)
+
+func main() {
+    today := Wednesday
+    fmt.Println("Today is:", today) // Akan mencetak 'Today is: 2'
+}
+```
+
+### Deklarasi Enum (string) Pada golang
+```go copy
+package main
+
+import "fmt"
+
+type State string
+
+const (
+    Draft     State = "Draft"
+    Published State = "Published"
+    Archived  State = "Archived"
+)
+
+func main() {
+    var documentState State = Published
+    fmt.Println("Document state:", documentState) // Akan mencetak 'Document state: Published'
+}
+```
+
+dan masih banyak lagi contoh yang bisa diketahui...
+
