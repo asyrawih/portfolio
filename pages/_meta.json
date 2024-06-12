@@ -1,3 +1,14 @@
 {
-  "blogs": "Blogs"
+  "blogs": {
+    "title": "Blogs",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact",
+    "type": "page"
+  },
+  "frameworks": {
+    "title": "Frameworks",
+    "type": "page"
+  }
 }

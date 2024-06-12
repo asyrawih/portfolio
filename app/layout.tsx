@@ -32,6 +32,13 @@ export default function RootLayout({ children, }: Readonly<{
         <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
     },
+    {
+      name: "Blogs",
+      link: "/blogs",
+      icon: (
+        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+      ),
+    },
   ];
   return (
     <html lang="en" suppressHydrationWarning>

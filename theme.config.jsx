@@ -1,5 +1,5 @@
 export default {
-  logo: <span>Blogs</span>,
+  logo: <span>Hanan Asyrawi Rivai 👋🏼</span>,
   project: {
     link: 'https://github.com/asyrawih',
     icon: (
@@ -21,5 +21,27 @@ export default {
         .
       </span>
     )
+  },
+  feedback: {
+    content: null,
+  },
+  editLink: {
+    component: null
+  },
+  toc: {
+    float: true
+  },
+  sidebar: {
+    titleComponent({ title, type }) {
+      if (type === 'separator') {
+        return (
+          <div style={{ background: 'cyan', textAlign: 'center' }}>{title}</div>
+        )
+      }
+      if (title === 'Blogs') {
+        return <>{title}</>
+      }
+      return <>{title}</>
+    }
   }
 }
