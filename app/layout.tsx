@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme"
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import { IconHome, IconUser, IconBrandBlogger, IconInfoHexagon } from "@tabler/icons-react";
 
 export const metadata: Metadata = {
   title: "Hanan",
@@ -29,14 +29,14 @@ export default function RootLayout({ children, }: Readonly<{
       name: "Contact",
       link: "/contact",
       icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <IconInfoHexagon className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
     },
     {
       name: "Blogs",
       link: "/blogs",
       icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <IconBrandBlogger className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
     },
   ];
