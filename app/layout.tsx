@@ -3,7 +3,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme"
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { IconHome, IconUser, IconBrandBlogger, IconInfoHexagon } from "@tabler/icons-react";
-
+import Head from "next/head"
 export const metadata: Metadata = {
   title: "Hanan",
   description: "Hanan's Portfolio",
@@ -42,6 +42,9 @@ export default function RootLayout({ children, }: Readonly<{
   ];
   return (
     <html lang="en" suppressHydrationWarning>
+      <Head>
+        <meta name="google-site-verification" content="9J8OuOYDw4OBnvBMCDnTYXnn2pECJ_oytIMKxtdpNFI" />
+      </Head>
       <body className="bg-primary-50 dark:bg-black">
         <ThemeProvider
           attribute="class"
