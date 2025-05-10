@@ -186,6 +186,59 @@ export function Experience() {
           </div>
         </div>
       </div>
+
+      {/* Education Section */}
+      <div className="mt-12 px-8 max-w-4xl mx-auto">
+        <span className="text-white text-3xl font-bold">Education</span>
+        <div className="bg-gray-800 rounded-lg p-6 shadow-lg mt-6">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+            <div>
+              <h3 className="text-xl font-semibold text-white">Universitas Muslim Indonesia Makassar</h3>
+              <p className="text-emerald-400 font-medium">Bachelor of Engineering - BE</p>
+            </div>
+            <span className="text-gray-400">Jan 2017 - Jul 2022</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Licenses & Certifications Section */}
+      <div className="mt-12 px-8 max-w-4xl mx-auto">
+        <span className="text-white text-3xl font-bold">Licenses & Certifications</span>
+        <div className="bg-gray-800 rounded-lg p-6 shadow-lg mt-6 space-y-4">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+            <div>
+              <h4 className="text-lg font-semibold text-white">Certified Secured Computer v2</h4>
+              <p className="text-gray-300">EC-Council</p>
+            </div>
+            <span className="text-gray-400">ID: 542532</span>
+          </div>
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+            <div>
+              <h4 className="text-lg font-semibold text-white">Google Cloud Certified Associate Cloud Engineer (completion)</h4>
+              <p className="text-gray-300">Whizlabs</p>
+            </div>
+            <span className="text-gray-400">ID: 651D1A11B5EB5</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Skills Section */}
+      <div className="mt-12 px-8 max-w-4xl mx-auto">
+        <span className="text-white text-3xl font-bold">Skills</span>
+        <div className="bg-gray-800 rounded-lg p-6 shadow-lg mt-6">
+          <div className="flex flex-wrap gap-2">
+            {[
+              'Security', 'Information Security', 'Network Security', 'WebSocket', 'Pubsub',
+              'Google Cloud Platform (GCP)', 'Unit Testing', 'Integration Testing',
+              'Tooling Design', 'CockroachDB'
+            ].map(skill => (
+              <span key={skill} className="bg-emerald-700 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   );
 }
